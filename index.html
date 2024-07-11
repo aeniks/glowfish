@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="viewport" content="width=device-width">
+<head>
 <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>glowfish</title>
 </head>
 <style>
 body {
 margin: 0;
 background: #ffff;
-height: 100%;
-color: #282828bb;
+height: 100vh;
+color: #28282888;
+background: url(bg.webp);
+background-size: cover;
+background-position: 50% 50%;
 }
 /* 
 @-webkit-keyframes svg-text-anim {
@@ -30,19 +34,23 @@ fill: #eeeeee;
 /* Most browsers */
 @keyframes svg-text-anim {
 40% {
-filter: drop-shadow(4px -2px #00000022);
+filter: drop-shadow(2px -2px #00000082);
 stroke-dashoffset: 0;
 fill: transparent;
 }
+50% {filter: drop-shadow(2px 2px 2px #00000084) drop-shadow(0 0 8px #ffffff);}
 60% {
-filter: drop-shadow(4px -1px #00000022);
+filter: drop-shadow(4px -1px 2px #b0ced744) drop-shadow(0 0 12px #eeeeeebb) drop-shadow(0px 0px 18px #ff11ef44);
 stroke-dashoffset: 0;
-fill: #eeeeee;
+fill: #ffffff;
+}
+80% {
+filter: drop-shadow(4px -1px 2px #b0ced744) drop-shadow(0 0 4px #eeeeeebb) drop-shadow(0px 0px 0px #1145ff88);
 }
 100% {
-filter: drop-shadow(1px 1px #000000ee) drop-shadow(0px 0px 44px #ffff0022);
+filter: drop-shadow(2px 2px #4b6565) drop-shadow(0 0 12px #ffffff) drop-shadow(0px 0px 40px #ffff8822);
 stroke-dashoffset: 0;
-fill: #fafafafa;
+fill: #ffffffdd;
 }
 }
 @keyframes aaaa {
@@ -60,7 +68,7 @@ flex-direction: column;
 justify-content: center;
 }
 .svg-holder {
-padding-top: ;
+margin-top: 22vh;
 width: 100%;
 display: flex;
 justify-content: center;
@@ -68,32 +76,39 @@ flex-wrap: wrap;
 flex-direction: row;
 }
 .holder1 {
-padding-top: 2em;
-width: 100%;
+margin-top: 2em;
+padding:1.4em;
+padding-bottom: 0;
+width: ;
 display: flex;
 justify-content: center;
 flex-wrap: wrap;
 flex-direction: row;
 opacity: 0;
-animation: aaaa 2s 2s forwards;
+animation: aaaa 1s 8s forwards;
+background: #ffffffbb;
 }
 .holder2 {
-width: 100%;
+/* border-top: 1px dashed #000000; */
+padding:1.4em;
+padding-top: 0;
+background: #ffffffbb;
 display: flex;
 justify-content: center;
 flex-wrap: wrap;
 flex-direction: row;
 opacity: 0;
-animation: aaaa 2s 2.2s forwards;
+animation: aaaa 1s 8s forwards;
+margin-bottom: 8vh;
 }
 a,
 a:visited,
 a:active {
 transition: ease-out 2s;
 color: #4a99b3;
-font-weight: 400;
-outline: 2px dotted #bbbbbb00;
-text-decoration: 2px underline dashed #bbbbbb;
+font-weight: 600;
+outline: 2px dotted #44888800;
+text-decoration: 2px underline dashed #233e3e88;
 }
 a:hover,
 a:visited:hover,
@@ -106,10 +121,11 @@ outline-offset: 2px;
 }
 code {
 color: ;
-letter-spacing: 0.1em;
-font-size: x-large;
+letter-spacing: 0.12em;
+font-size: large;
 }
 svg {
+max-width: 88vw;
 overflow: visible;
 }
 </style>
@@ -149,7 +165,7 @@ path.style["animation"] = `${duration}s svg-text-anim ${mode} ${timingFunction}`
 path.style["animation-delay"] = `${i * delay}s`;
 }
 }
-setTextAnimation(0.1, 9, 2, "ease-in", "#3b3b3b", false);
+setTextAnimation(0.1, 11, 2.2, "ease-in", "#444444", false);
 </script>
 </body>
 </html>
