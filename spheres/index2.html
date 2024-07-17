@@ -21,31 +21,34 @@ width: 100%;
 height: 100%;
 overflow-x: hidden;
 }
+
 body {
 background: linear-gradient(105deg, #d9dd08, #4d6669, #87e177, #e177c4, #175f61, #175f61);
 background-size: 2200% 2200%;
-
 animation: ssss 26s ease infinite;
 }
+
 .over {
-mix-blend-mode: ;
 position: absolute;
 z-index: 2;
 height: 1100vh;
 width: 100vw;
-background: ;
 }
+
 @keyframes ssss {
 0% {
 background-position: 0% 90%;
 }
+
 50% {
 background-position: 100% 11%;
 }
+
 100% {
 background-position: 0% 90%;
 }
 }
+
 model-viewer {
 width: 100%;
 height: 100%;
@@ -56,6 +59,7 @@ z-index: 1;
 background-color: #ffffff00;
 mix-blend-mode: luminosity;
 }
+
 a,
 a:visited {
 color: #e177c4;
@@ -63,6 +67,7 @@ text-decoration: 2px underline #ffffff;
 font: 800 4em monospace;
 letter-spacing: 1em;
 }
+
 .dfdf {
 z-index: 4;
 position: absolute;
@@ -76,7 +81,6 @@ bottom: -200vh;
 <!-- 
 <model-viewer camera-controls touch-action="pan-y" camera-orbit="calc(-1.5rad + env(window-scroll-y) * 4rad) calc(0deg + env(window-scroll-y) * 180deg) calc(5m - env(window-scroll-y) * 10m)" src="Horse.glb" alt="A 3D model of an astronaut"></model-viewer>
  -->
-
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 <a href="https://12ants.com"><code class="dfdf">12ants.com</code></a>
 </body>
