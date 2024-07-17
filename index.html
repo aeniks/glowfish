@@ -4,130 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>glowfish</title>
+<link href="main.css" rel="stylesheet">
 </head>
 <style>
-body {
-margin: 0;
-background: #ffff;
-height: 100vh;
-color: #28282888;
-background: url(bg.webp);
-background-size: cover;
-background-position: 50% 50%;
-}
-/* 
-@-webkit-keyframes svg-text-anim {
-40% {
-text-shadow: 0 0 12px #000000;
-stroke-dashoffset: 0;
-fill: transparent;
-}
-60% {
-stroke-dashoffset: 0;
-fill: #dddddd;
-}
-100% {
-stroke-dashoffset: 0;
-fill: #eeeeee;
-}
-} */
-/* Most browsers */
-@keyframes svg-text-anim {
-40% {
-filter: drop-shadow(2px -2px #00000082);
-stroke-dashoffset: 0;
-fill: transparent;
-}
-50% {filter: drop-shadow(2px 2px 2px #00000084) drop-shadow(0 0 8px #ffffff);}
-60% {
-filter: drop-shadow(4px -1px 2px #b0ced744) drop-shadow(0 0 12px #eeeeeebb) drop-shadow(0px 0px 18px #ff11ef44);
-stroke-dashoffset: 0;
-fill: #ffffff;
-}
-80% {
-filter: drop-shadow(4px -1px 2px #b0ced744) drop-shadow(0 0 4px #eeeeeebb) drop-shadow(0px 0px 0px #1145ff88);
-}
-100% {
-filter: drop-shadow(2px 2px #4b6565) drop-shadow(0 0 12px #ffffff) drop-shadow(0px 0px 40px #ffff8822);
-stroke-dashoffset: 0;
-fill: #ffffffdd;
-}
-}
-@keyframes aaaa {
-100% {
-opacity: 1;
-}
-}
-.site {
-height: 88vh;
-width: 100vw;
-display: flex;
-align-items: center;
-align-content: center;
-flex-direction: column;
-justify-content: center;
-}
-.svg-holder {
-margin-top: 22vh;
-width: 100%;
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-flex-direction: row;
-}
-.holder1 {
-margin-top: 2em;
-padding:1.4em;
-padding-bottom: 0;
-width: ;
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-flex-direction: row;
-opacity: 0;
-animation: aaaa 1s 8s forwards;
-background: #ffffffbb;
-}
-.holder2 {
-/* border-top: 1px dashed #000000; */
-padding:1.4em;
-padding-top: 0;
-background: #ffffffbb;
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-flex-direction: row;
-opacity: 0;
-animation: aaaa 1s 8s forwards;
-margin-bottom: 8vh;
-}
-a,
-a:visited,
-a:active {
-transition: ease-out 2s;
-color: #4a99b3;
-font-weight: 600;
-outline: 2px dotted #44888800;
-text-decoration: 2px underline dashed #233e3e88;
-}
-a:hover,
-a:visited:hover,
-a:active:hover {
-transition: ease-out 2s;
-border-radius: 22px;
-color: #00e1ff;
-outline: 22px dotted #bbbbbb;
-outline-offset: 2px;
-}
-code {
-color: ;
-letter-spacing: 0.12em;
-font-size: large;
-}
-svg {
-max-width: 88vw;
-overflow: visible;
-}
+
 </style>
 <body>
 <div class="site">
@@ -149,6 +29,22 @@ overflow: visible;
 <a href="mailto:hello@glowfish.se"><code>hello@glowfish.se</code></a>
 </div>
 <div class="holder2"><code>0046 070937 22 42</code></div>
+<a href="#hello">
+<div class="down"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjIuMSBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMiBGb250aWNvbnMsIEluYy4gLS0+PHBhdGggZD0iTTIwMS40IDM3NC42YzEyLjUgMTIuNSAzMi44IDEyLjUgNDUuMyAwbDE2MC0xNjBjMTIuNS0xMi41IDEyLjUtMzIuOCAwLTQ1LjNzLTMyLjgtMTIuNS00NS4zIDBMMjI0IDMwNi43IDg2LjYgMTY5LjRjLTEyLjUtMTIuNS0zMi44LTEyLjUtNDUuMyAwcy0xMi41IDMyLjggMCA0NS4zbDE2MCAxNjB6Ii8+PC9zdmc+"></div></a></div>
+<div class="hi" id="hello">
+<code>hello1</code>
+</div>
+<div class="hi" id="hello2">
+
+<code>hello2</code>
+
+<div class="lala">
+<code>lalalala</code>
+</div>
+
+</div>
+
+
 </div>
 <script>
 function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeColor, repeat) {
@@ -162,10 +58,10 @@ path.style["stroke-dasharray"] = `${length}px`;
 path.style["stroke-width"] = `${strokeWidth}px`;
 path.style["stroke"] = `${strokeColor}`;
 path.style["animation"] = `${duration}s svg-text-anim ${mode} ${timingFunction}`;
-path.style["animation-delay"] = `${i * delay}s`;
+path.style["animation-delay"] = `${1 + i * delay}s`;
 }
 }
-setTextAnimation(0.1, 11, 2.2, "ease-in", "#444444", false);
+setTextAnimation(".2", 4, 2.8, "ease-in-out", "#444444", false);
 </script>
 </body>
 </html>
